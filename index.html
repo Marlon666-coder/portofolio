@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MARLO RIZKY VALENTINO — THE DIGITAL UNIVERSE</title>
+  <meta name="description" content="Marlo Rizky Valentino — Software Developer. A cinematic, holographic developer portfolio." />
+  <meta name="theme-color" content="#02030a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ===================== 3D UNIVERSE ===================== -->
+  <canvas id="universe" aria-hidden="true"></canvas>
+  <canvas id="fallback-canvas" aria-hidden="true" hidden></canvas>
+  <div class="fx-scanlines" aria-hidden="true"></div>
+
+  <!-- ===================== LOADER ===================== -->
+  <div id="loader" role="status" aria-live="polite">
+    <div class="loader-inner">
+      <div class="loader-logo"><span class="ll-main">MARLO</span><span class="ll-dot">.RV</span></div>
+      <ul id="loader-log" class="loader-log"></ul>
+      <div class="loader-bar"><div id="loader-fill" class="loader-fill"></div></div>
+      <div class="loader-meta"><span id="loader-status">BOOT SEQUENCE</span><span id="loader-pct">000%</span></div>
+    </div>
+    <div class="loader-grid" aria-hidden="true"></div>
+  </div>
+
+  <!-- ===================== CINEMATIC HUD ===================== -->
+  <div id="intro-hud" aria-hidden="true">
+    <div class="lb lb-top"></div>
+    <div class="lb lb-bottom"></div>
+
+    <div class="hud-corner tl">
+      <b>MRV // DIGITAL UNIVERSE</b>
+      <span>SECTOR HELIOS-7 · DEEP FIELD</span>
+    </div>
+    <div class="hud-corner tr">
+      <b id="hud-time">T+00:00.00</b>
+      <span>REC • CINEMATIC FEED</span>
+    </div>
+    <div class="hud-corner bl">
+      <span>CAM POSITION</span>
+      <b id="hud-coords">X 0.0  Y 0.0  Z 0.0</b>
+    </div>
+    <div class="hud-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <div class="hud-center"><div id="hud-msg" class="hud-text"></div></div>
+    <div class="hud-subline"><div id="hud-sub" class="hud-text"></div></div>
+
+    <div id="hud-reticle" class="reticle">
+      <i class="r-c r-tl"></i><i class="r-c r-tr"></i><i class="r-c r-bl"></i><i class="r-c r-br"></i>
+      <span id="hud-reticle-label" class="reticle-label"></span>
+    </div>
+
+    <div id="hud-energy" class="hud-panel energy">
+      <div class="hp-head"><span>ENERGY CORE</span><span id="energy-state">STANDBY</span></div>
+      <div class="hp-value"><span id="energy-pct">000%</span></div>
+      <div class="hp-bar"><div id="energy-fill"></div></div>
+      <div class="hp-ticks"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div id="hud-fire" class="hud-fire">FIRE</div>
+
+    <div id="hud-warning" class="hud-warning">
+      <div class="hw-stripes"></div>
+      <div class="hw-title">WARNING // CORE INSTABILITY</div>
+      <div class="hw-pct" id="warn-pct">0%</div>
+    </div>
+
+    <div id="hud-identity" class="hud-identity">
+      <div id="hud-role" class="hi-role">SOFTWARE DEVELOPER</div>
+      <div id="hud-online" class="hi-online"><i></i>SYSTEM ONLINE</div>
+    </div>
+  </div>
+  <div id="fallback-title" class="fallback-title" aria-hidden="true"></div>
+
+  <button id="skip-btn" class="skip-btn" type="button">SKIP INTRO <span>&gt;&gt;</span></button>
+  <button id="sound-btn" class="sound-btn" type="button" aria-pressed="false">SOUND: OFF</button>
+
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  <div id="wipe" aria-hidden="true"></div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header id="nav" class="nav">
+    <a href="#home" class="nav-logo" aria-label="Home"><b data-initials>MRV</b><span>// SYSTEM</span></a>
+    <nav id="nav-links" class="nav-links" aria-label="Main">
+      <a href="#home" data-nav="home"><i>01</i>HOME</a>
+      <a href="#about" data-nav="about"><i>02</i>ABOUT</a>
+      <a href="#skills" data-nav="skills"><i>03</i>SKILLS</a>
+      <a href="#missions" data-nav="missions"><i>04</i>MISSIONS</a>
+      <a href="#contact" data-nav="contact"><i>05</i>CONTACT</a>
+    </nav>
+    <div class="nav-status"><i></i>ONLINE</div>
+    <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+  </header>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <main id="portfolio">
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="blink">•</span> IDENTITY VERIFIED // ACCESS GRANTED</p>
+        <h1 id="hero-name" class="hero-name">MARLO RIZKY VALENTINO</h1>
+        <p id="hero-role" class="hero-role">SOFTWARE DEVELOPER</p>
+        <p id="hero-tagline" class="hero-tagline">BUILDING THE FUTURE, ONE LINE OF CODE AT A TIME.</p>
+        <div class="hero-actions">
+          <a href="#about" class="btn btn-solid"><span>ENTER PORTFOLIO</span></a>
+          <a href="#missions" class="btn btn-ghost"><span>VIEW PROJECTS</span></a>
+        </div>
+      </div>
+      <div class="hero-core">
+        <div id="core-anchor" class="core-anchor" aria-hidden="true">
+          <span class="ca-bracket tl"></span><span class="ca-bracket tr"></span><span class="ca-bracket bl"></span><span class="ca-bracket br"></span>
+          <span class="ca-label l1">HOLOGRAPHIC CORE</span>
+          <span class="ca-label l2">STATUS: STABLE</span>
+          <span class="ca-label l3">OUTPUT // NOMINAL</span>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to about"><span>SCROLL</span><i></i></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <header class="section-head reveal" data-parallax>
+        <span class="sh-index">02 // PERSONNEL FILE</span>
+        <h2>WHO IS MARLO?</h2>
+      </header>
+      <div class="holo-panel about-panel reveal">
+        <div class="hp-bar-top"><span>FILE: <b data-initials>MRV</b>-001</span><span>CLEARANCE: PUBLIC</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="about-grid">
+          <div class="about-main">
+            <p id="about-text" class="about-text"></p>
+            <ul id="about-tags" class="tag-list"></ul>
+          </div>
+          <dl id="about-data" class="about-data"></dl>
+        </div>
+        <span class="panel-scan" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <header class="section-head reveal" data-parallax>
+        <span class="sh-index">03 // LOADOUT</span>
+        <h2>TECHNICAL ARSENAL</h2>
+      </header>
+      <ul id="skills-grid" class="skills-grid"></ul>
+    </section>
+
+    <!-- MISSIONS -->
+    <section id="missions" class="section">
+      <header class="section-head reveal" data-parallax>
+        <span class="sh-index">04 // ARCHIVE</span>
+        <h2>MISSION LOG</h2>
+      </header>
+      <div id="missions-grid" class="missions-grid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <header class="section-head reveal" data-parallax>
+        <span class="sh-index">05 // COMMS</span>
+        <h2>OPEN A CHANNEL</h2>
+      </header>
+      <div class="holo-panel contact-panel reveal">
+        <div class="terminal">
+          <p><span class="tp">mrv@system:~$</span> transmit --to marlo</p>
+          <p class="dim">&gt; establishing secure uplink... <span class="ok">OK</span></p>
+          <p class="dim">&gt; awaiting your signal<span class="caret">_</span></p>
+        </div>
+        <a id="contact-email" class="contact-email" href="#"><small>EMAIL</small><span></span></a>
+        <ul id="contact-socials" class="socials"></ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="footer-year"></span> <span id="footer-name"></span> // SYSTEM ONLINE</span>
+      <button id="replay-btn" class="btn btn-ghost sm" type="button">REPLAY INTRO</button>
+    </footer>
+  </main>
+
+  <noscript>
+    <div class="noscript">MARLO RIZKY VALENTINO — SOFTWARE DEVELOPER. Enable JavaScript to enter the Digital Universe.</div>
+  </noscript>
+
+  <!-- configuration (edit this) -->
+  <script src="config.js"></script>
+  <!-- engine -->
+  <script src="js/engine/math.js"></script>
+  <script src="js/engine/gl.js"></script>
+  <script src="js/engine/geometry.js"></script>
+  <script src="js/engine/shaders.js"></script>
+  <!-- 3D scene -->
+  <script src="js/scene/particles.js"></script>
+  <script src="js/scene/space.js"></script>
+  <script src="js/scene/sun.js"></script>
+  <script src="js/scene/ship.js"></script>
+  <script src="js/scene/explosion.js"></script>
+  <script src="js/scene/hologram.js"></script>
+  <script src="js/scene/core.js"></script>
+  <script src="js/scene/postfx.js"></script>
+  <script src="js/scene/renderer.js"></script>
+  <!-- animation / timeline -->
+  <script src="js/cinematic/director.js"></script>
+  <script src="js/cinematic/portfolio-scene.js"></script>
+  <!-- UI -->
+  <script src="js/ui/hud.js"></script>
+  <script src="js/ui/sound.js"></script>
+  <script src="js/ui/loader.js"></script>
+  <script src="js/ui/cursor.js"></script>
+  <script src="js/ui/nav.js"></script>
+  <script src="js/ui/portfolio.js"></script>
+  <script src="js/fallback.js"></script>
+  <!-- bootstrap -->
+  <script src="script.js"></script>
+</body>
+</html>
