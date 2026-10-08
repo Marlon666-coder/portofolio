@@ -61,7 +61,7 @@
   /* ------------------------------------------------------------------
    *  UI SETUP (works for both WebGL and fallback paths)
    * ------------------------------------------------------------------ */
-  const portfolio = new MRV.Portfolio(cfg, { reducedMotion });
+  const portfolio = new MRV.Portfolio(cfg, { reducedMotion, mobile: tierName === 'mobile' });
   const nav = new MRV.Nav();
   const cursor = new MRV.Cursor();
   const sound = new MRV.Sound(document.getElementById('sound-btn'));
@@ -149,6 +149,7 @@
     dockSound(true);
     hud.root.classList.add('hud-off');
     if (fallback) fallback.title.classList.remove('on');
+    portfolio.onEnter();
     const hash = location.hash && document.getElementById(location.hash.slice(1));
     if (hash && hash.id !== 'home') setTimeout(() => hash.scrollIntoView(), 60);
   }

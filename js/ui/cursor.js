@@ -25,7 +25,7 @@
         if (!this.seen) { this.seen = true; this.rx = this.x; this.ry = this.y; document.documentElement.classList.add('cursor-seen'); }
       }, { passive: true });
       document.addEventListener('pointerover', (e) => {
-        const hit = e.target.closest && e.target.closest('a, button, [data-hover], .skill-card, .mission-card');
+        const hit = e.target.closest && e.target.closest('a, button, [data-hover], .skill-card, .mission-card, .holo-profile');
         document.documentElement.classList.toggle('cursor-hover', !!hit);
       });
       document.addEventListener('pointerdown', () => document.documentElement.classList.add('cursor-down'));
