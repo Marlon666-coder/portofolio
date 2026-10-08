@@ -4,8 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>MARLO RIZKY VALENTINO — THE DIGITAL UNIVERSE</title>
-  <meta name="description" content="Marlo Rizky Valentino — Software Developer. A cinematic, holographic developer portfolio." />
+  <meta name="description" content="Personal portfolio of Marlo Rizky Valentino, Computer Science student at BINUS University." />
+  <meta name="author" content="Marlo Rizky Valentino" />
   <meta name="theme-color" content="#02030a" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://marlon666-coder.github.io/portofolio/" />
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="THE DIGITAL UNIVERSE" />
+  <meta property="og:title" content="MARLO RIZKY VALENTINO — THE DIGITAL UNIVERSE" />
+  <meta property="og:description" content="Personal portfolio of Marlo Rizky Valentino, Computer Science student at BINUS University." />
+  <meta property="og:url" content="https://marlon666-coder.github.io/portofolio/" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MARLO RIZKY VALENTINO — THE DIGITAL UNIVERSE" />
+  <meta name="twitter:description" content="Personal portfolio of Marlo Rizky Valentino, Computer Science student at BINUS University." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -72,7 +86,7 @@
     </div>
 
     <div id="hud-identity" class="hud-identity">
-      <div id="hud-role" class="hi-role">SOFTWARE DEVELOPER</div>
+      <div id="hud-role" class="hi-role">COMPUTER SCIENCE STUDENT</div>
       <div id="hud-online" class="hi-online"><i></i>SYSTEM ONLINE</div>
     </div>
   </div>
@@ -85,41 +99,101 @@
   <div id="cursor-ring" aria-hidden="true"></div>
   <div id="wipe" aria-hidden="true"></div>
 
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"><i></i></div>
+  <div class="fx-noise" aria-hidden="true"></div>
+
   <!-- ===================== NAVIGATION ===================== -->
   <header id="nav" class="nav">
-    <a href="#home" class="nav-logo" aria-label="Home"><b data-initials>MRV</b><span>// SYSTEM</span></a>
+    <a href="#home" class="nav-logo" aria-label="Marlo Rizky Valentino — home"><b data-initials>MRV</b><span>// MARLO.OS</span></a>
     <nav id="nav-links" class="nav-links" aria-label="Main">
       <a href="#home" data-nav="home"><i>01</i>HOME</a>
       <a href="#about" data-nav="about"><i>02</i>ABOUT</a>
-      <a href="#skills" data-nav="skills"><i>03</i>SKILLS</a>
-      <a href="#missions" data-nav="missions"><i>04</i>MISSIONS</a>
-      <a href="#contact" data-nav="contact"><i>05</i>CONTACT</a>
+      <a href="#education" data-nav="education"><i>03</i>EDUCATION</a>
+      <a href="#projects" data-nav="projects"><i>04</i>PROJECTS</a>
+      <a href="#certificates" data-nav="certificates"><i>05</i>CERTIFICATES</a>
+      <a href="#cv" data-nav="cv"><i>06</i>CV</a>
+      <a href="#contact" data-nav="contact"><i>07</i>CONTACT</a>
     </nav>
     <div class="nav-status"><i></i>ONLINE</div>
-    <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+    <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
   </header>
 
   <!-- ===================== PORTFOLIO ===================== -->
   <main id="portfolio">
 
     <!-- HERO -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-label="Introduction">
       <div class="hero-content">
         <p class="eyebrow"><span class="blink">•</span> IDENTITY VERIFIED // ACCESS GRANTED</p>
         <h1 id="hero-name" class="hero-name">MARLO RIZKY VALENTINO</h1>
-        <p id="hero-role" class="hero-role">SOFTWARE DEVELOPER</p>
-        <p id="hero-tagline" class="hero-tagline">BUILDING THE FUTURE, ONE LINE OF CODE AT A TIME.</p>
+        <p class="hero-role"><span id="hero-role">COMPUTER SCIENCE STUDENT</span></p>
+        <p class="hero-uni">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/><path d="M22 8v6"/></svg>
+          <span id="hero-uni">BINUS UNIVERSITY</span>
+        </p>
+        <p id="hero-tagline" class="hero-tagline"><span class="typed" aria-hidden="true"></span><span class="type-caret" aria-hidden="true"></span></p>
         <div class="hero-actions">
-          <a href="#about" class="btn btn-solid"><span>ENTER PORTFOLIO</span></a>
-          <a href="#missions" class="btn btn-ghost"><span>VIEW PROJECTS</span></a>
+          <a href="#projects" class="btn btn-solid"><span>VIEW PROJECTS</span></a>
+          <a href="#contact" class="btn btn-ghost"><span>CONTACT ME</span></a>
         </div>
+        <ul class="hero-meta" aria-label="System status">
+          <li><span>SYSTEM</span><b>MARLO.OS</b></li>
+          <li><span>STATUS</span><b class="ok"><i></i>ACTIVE</b></li>
+          <li><span>LOCATION</span><b>DIGITAL SPACE</b></li>
+          <li><span>VERSION</span><b>2026</b></li>
+        </ul>
       </div>
+
       <div class="hero-core">
-        <div id="core-anchor" class="core-anchor" aria-hidden="true">
-          <span class="ca-bracket tl"></span><span class="ca-bracket tr"></span><span class="ca-bracket bl"></span><span class="ca-bracket br"></span>
-          <span class="ca-label l1">HOLOGRAPHIC CORE</span>
-          <span class="ca-label l2">STATUS: STABLE</span>
-          <span class="ca-label l3">OUTPUT // NOMINAL</span>
+        <div id="core-anchor" class="core-anchor">
+          <span class="ca-bracket tl" aria-hidden="true"></span><span class="ca-bracket tr" aria-hidden="true"></span><span class="ca-bracket bl" aria-hidden="true"></span><span class="ca-bracket br" aria-hidden="true"></span>
+          <span class="ca-label l1" aria-hidden="true">HOLOGRAPHIC PROFILE</span>
+          <span class="ca-label l2" aria-hidden="true">STATUS: ONLINE</span>
+          <span class="ca-label l3" aria-hidden="true">ID // MRV-2026</span>
+
+          <!-- HOLOGRAPHIC PROFILE — photo path is set in config.js (owner.photo) -->
+          <figure id="holo-profile" class="holo-profile">
+            <div class="hp-float">
+              <div class="hp-tilt">
+                <svg class="hp-frame" viewBox="0 0 400 400" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="hpg" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#3ef2ff" />
+                      <stop offset=".55" stop-color="#2d7bff" />
+                      <stop offset="1" stop-color="#8b5cff" />
+                    </linearGradient>
+                  </defs>
+                  <g class="hpf-spin">
+                    <circle cx="200" cy="200" r="192" fill="none" stroke="url(#hpg)" stroke-width="1.2" stroke-dasharray="2 7" opacity=".7" />
+                  </g>
+                  <g class="hpf-spin rev">
+                    <circle cx="200" cy="200" r="178" fill="none" stroke="#3ef2ff" stroke-width="2" stroke-dasharray="120 40 18 40 60 280" stroke-linecap="round" opacity=".85" />
+                  </g>
+                  <g class="hpf-ticks">
+                    <path d="M200 4v14M200 382v14M4 200h14M382 200h14" stroke="#3ef2ff" stroke-width="2" />
+                    <path d="M61 61l8 8M339 61l-8 8M61 339l8-8M339 339l-8-8" stroke="#8b5cff" stroke-width="1.5" opacity=".8" />
+                  </g>
+                </svg>
+                <div class="hp-photo">
+                  <img id="profile-img" alt="" width="800" height="800" decoding="async" fetchpriority="high" draggable="false" />
+                  <span class="hp-rgb hp-rgb-c" aria-hidden="true"></span>
+                  <span class="hp-rgb hp-rgb-m" aria-hidden="true"></span>
+                  <span class="hp-tint" aria-hidden="true"></span>
+                  <span class="hp-lines" aria-hidden="true"></span>
+                  <span class="hp-noise" aria-hidden="true"></span>
+                  <span class="hp-sweep" aria-hidden="true"></span>
+                  <div class="hp-empty" aria-hidden="true">
+                    <b data-initials>MRV</b>
+                    <span>PROFILE IMAGE<br />PENDING UPLOAD</span>
+                  </div>
+                </div>
+                <canvas class="hp-particles" aria-hidden="true"></canvas>
+                <span class="hp-chip c1" aria-hidden="true"><i></i>SCAN 100%</span>
+                <span class="hp-chip c2" aria-hidden="true">HOLO-ID // MRV</span>
+              </div>
+            </div>
+            <figcaption class="sr-only">Marlo Rizky Valentino — Computer Science Student, BINUS University</figcaption>
+          </figure>
         </div>
       </div>
       <a href="#about" class="scroll-cue" aria-label="Scroll to about"><span>SCROLL</span><i></i></a>
@@ -129,13 +203,17 @@
     <section id="about" class="section">
       <header class="section-head reveal" data-parallax>
         <span class="sh-index">02 // PERSONNEL FILE</span>
-        <h2>WHO IS MARLO?</h2>
+        <h2>ABOUT ME</h2>
+        <p class="sh-sub">WHO IS MARLO?</p>
       </header>
       <div class="holo-panel about-panel reveal">
-        <div class="hp-bar-top"><span>FILE: <b data-initials>MRV</b>-001</span><span>CLEARANCE: PUBLIC</span><span class="dots"><i></i><i></i><i></i></span></div>
+        <div class="hp-bar-top"><span>FILE: <b data-initials>MRV</b>-001</span><span>CLEARANCE: PUBLIC</span><span class="hide-sm">MARLO.OS // V2026</span><span class="dots"><i></i><i></i><i></i></span></div>
         <div class="about-grid">
           <div class="about-main">
+            <h3 id="about-name" class="about-name"></h3>
+            <p id="about-role" class="about-role"></p>
             <p id="about-text" class="about-text"></p>
+            <h4 class="mini-head">INTERESTS</h4>
             <ul id="about-tags" class="tag-list"></ul>
           </div>
           <dl id="about-data" class="about-data"></dl>
@@ -144,49 +222,130 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
+    <!-- SKILLS (part of ABOUT in the navigation) -->
+    <section id="skills" class="section section-tight" data-nav-group="about">
       <header class="section-head reveal" data-parallax>
-        <span class="sh-index">03 // LOADOUT</span>
+        <span class="sh-index">02.B // LOADOUT</span>
         <h2>TECHNICAL ARSENAL</h2>
       </header>
       <ul id="skills-grid" class="skills-grid"></ul>
     </section>
 
-    <!-- MISSIONS -->
-    <section id="missions" class="section">
+    <!-- EDUCATION -->
+    <section id="education" class="section">
       <header class="section-head reveal" data-parallax>
-        <span class="sh-index">04 // ARCHIVE</span>
-        <h2>MISSION LOG</h2>
+        <span class="sh-index">03 // ACADEMIC RECORD</span>
+        <h2>EDUCATION</h2>
+      </header>
+      <ol id="edu-timeline" class="edu-timeline"></ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <span id="missions" class="anchor-alias" aria-hidden="true"></span>
+      <header class="section-head reveal" data-parallax>
+        <span class="sh-index">04 // MISSION LOG</span>
+        <h2>PROJECTS</h2>
       </header>
       <div id="missions-grid" class="missions-grid"></div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="section">
+      <header class="section-head reveal" data-parallax>
+        <span class="sh-index">05 // ACHIEVEMENTS</span>
+        <h2>CERTIFICATES</h2>
+      </header>
+      <div id="cert-grid" class="cert-grid"></div>
+    </section>
+
+    <!-- CV / RESUME -->
+    <section id="cv" class="section">
+      <header class="section-head reveal" data-parallax>
+        <span class="sh-index">06 // DOSSIER</span>
+        <h2>CV / RESUME</h2>
+      </header>
+      <div class="holo-panel cv-panel reveal">
+        <div class="cv-doc" aria-hidden="true">
+          <span class="cvd-head"></span>
+          <span></span><span></span><span class="short"></span>
+          <span></span><span class="short"></span><span></span>
+          <b>PDF</b>
+          <span class="panel-scan"></span>
+        </div>
+        <div class="cv-info">
+          <span class="cv-kicker">DOCUMENT // CURRICULUM VITAE</span>
+          <h3 id="cv-name" class="cv-name"></h3>
+          <p id="cv-sub" class="cv-sub"></p>
+          <p id="cv-status" class="cv-status" role="status"><i></i><span>CHECKING FILE…</span></p>
+          <div class="cv-actions">
+            <a id="cv-view" class="btn btn-ghost" href="#" target="_blank" rel="noopener"><span>VIEW CV</span></a>
+            <a id="cv-download" class="btn btn-solid" href="#" download><span>DOWNLOAD CV</span></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section contact">
       <header class="section-head reveal" data-parallax>
-        <span class="sh-index">05 // COMMS</span>
-        <h2>OPEN A CHANNEL</h2>
+        <span class="sh-index">07 // COMMS</span>
+        <h2>CONTACT ME</h2>
+        <p class="sh-sub">OPEN A CHANNEL</p>
       </header>
-      <div class="holo-panel contact-panel reveal">
-        <div class="terminal">
-          <p><span class="tp">mrv@system:~$</span> transmit --to marlo</p>
-          <p class="dim">&gt; establishing secure uplink... <span class="ok">OK</span></p>
-          <p class="dim">&gt; awaiting your signal<span class="caret">_</span></p>
+      <div class="contact-layout">
+        <div class="holo-panel contact-panel reveal">
+          <div class="terminal">
+            <p><span class="tp">mrv@system:~$</span> transmit --to marlo</p>
+            <p class="dim">&gt; establishing secure uplink... <span class="ok">OK</span></p>
+            <p class="dim">&gt; channels available: instagram, whatsapp</p>
+            <p class="dim">&gt; awaiting your signal<span class="caret">_</span></p>
+          </div>
+          <p class="contact-note">Have a question, an idea, or an opportunity? Reach out through any channel below.</p>
+          <a id="contact-email" class="contact-email" href="#" hidden><small>EMAIL</small><span></span></a>
+          <ul id="contact-socials" class="socials"></ul>
+          <span class="panel-scan" aria-hidden="true"></span>
         </div>
-        <a id="contact-email" class="contact-email" href="#"><small>EMAIL</small><span></span></a>
-        <ul id="contact-socials" class="socials"></ul>
+        <div id="contact-cards" class="contact-cards"></div>
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      <span>© <span id="footer-year"></span> <span id="footer-name"></span> // SYSTEM ONLINE</span>
-      <button id="replay-btn" class="btn btn-ghost sm" type="button">REPLAY INTRO</button>
+      <div class="footer-grid">
+        <div class="ft-brand">
+          <b id="footer-brand">MARLO RIZKY VALENTINO</b>
+          <span class="ft-universe">THE DIGITAL UNIVERSE</span>
+          <p id="footer-info">Computer Science Student<br />BINUS University</p>
+        </div>
+        <nav class="ft-nav" aria-label="Footer">
+          <span class="ft-title">CHANNELS</span>
+          <ul id="footer-links" class="ft-links"></ul>
+        </nav>
+        <div class="ft-sys">
+          <span class="ft-title">SYSTEM</span>
+          <span class="ft-status"><i></i>SYSTEM STATUS: ONLINE</span>
+          <button id="replay-btn" class="btn btn-ghost sm" type="button"><span>REPLAY INTRO</span></button>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <span>Copyright © <span id="footer-year">2026</span> <span id="footer-name">Marlo Rizky Valentino</span></span>
+        <span>MARLO.OS // VERSION 2026</span>
+      </div>
     </footer>
   </main>
 
+  <!-- ===================== MODAL / LIGHTBOX ===================== -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" tabindex="-1">
+      <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
   <noscript>
-    <div class="noscript">MARLO RIZKY VALENTINO — SOFTWARE DEVELOPER. Enable JavaScript to enter the Digital Universe.</div>
+    <div class="noscript">MARLO RIZKY VALENTINO — Computer Science Student, BINUS University. Enable JavaScript to enter the Digital Universe.</div>
   </noscript>
 
   <!-- configuration (edit this) -->
@@ -215,6 +374,8 @@
   <script src="js/ui/loader.js"></script>
   <script src="js/ui/cursor.js"></script>
   <script src="js/ui/nav.js"></script>
+  <script src="js/ui/modal.js"></script>
+  <script src="js/ui/profile.js"></script>
   <script src="js/ui/portfolio.js"></script>
   <script src="js/fallback.js"></script>
   <!-- bootstrap -->

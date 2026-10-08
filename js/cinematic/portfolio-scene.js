@@ -44,7 +44,7 @@
         const worldPerPx = (2 * d * Math.tan((50 * Math.PI / 180) / 2)) / this.r.cssH;
         s.core = {
           pos: p,
-          scale: Math.min(a.width, a.height) * 0.5 * worldPerPx * 0.52,
+          scale: Math.min(a.width, a.height) * 0.5 * worldPerPx * 0.64,   // sized so the rings orbit around the holographic profile
           intensity: pf,
           rotX: -my * 0.35,
           rotY: mx * 0.7
